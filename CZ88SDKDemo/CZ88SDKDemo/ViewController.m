@@ -18,7 +18,7 @@
     [super viewDidLoad];
     [[CZManager sharedInstance]cz88_readipdetailcompleted:^(CZIPModel * _Nullable result, NSError * _Nullable error) {
         if(!error){
-            NSLog(@"成功 ip=>%@ 国家=>%@ 省=>%@ 城市=>%@ 运营商=>%@",result.ip,result.country,result.province,result.city,result.isp);
+            NSLog(@"成功 ip=>%@ 国家=>%@ 省=>%@ 城市=>%@ 区域=>%@ 运营商=>%@",result.ip,result.country,result.province,result.city,result.districts,result.isp);
 //            self.ipLab.text = [NSString stringWithFormat:@"ip=>%@ \n国家=>%@ \n省=>%@ \n城市=>%@ \n运营商=>%@",result.ip,result.country,result.province,result.city,result.isp];
 
         }else{

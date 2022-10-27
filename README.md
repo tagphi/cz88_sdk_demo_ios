@@ -16,7 +16,11 @@
 ### 2,接入SDK
 
 #### 2.1 Cocoapods 自动集成(推荐)
-Cocoapods集成可灵活配置所需SDK，如工程target名为CZ88SDKDemo，可选添下面的SDK，如在项目根目录的Podfile的格式：
+
+1.Cocoapods集成可灵活配置所需SDK，在您项目工程（.xcodeproj）文件同目录下创建一个名为 Podfile 文件。
+
+
+2.编辑Podfile内容，iOS 纯真SDK 的 Pod 库的名称为 CZ88SDK
 ````
 target 'CZ88SDKDemo' do
 
@@ -26,7 +30,28 @@ target 'CZ88SDKDemo' do
 end
 
 ````
-建议使用 pod update 命令进行直接更新。
+3.执行安装命令
+
+```
+
+pod install
+
+```
+
+4.导入成功，启动工程
+命令执行成功后，会生成 .xcworkspace 文件，恭喜你已成功导入 SDK。打开.xcworkspace 文件以启动工程（注意：此时不能同时开启.xcodeproj文件）。
+
+##### CocoaPods相关问题
+
+无法更新到最新版本 若已经安装了纯真SDK，想要更新到最新版本，在Podfile文件的目录下使用以下命令：
+
+```
+
+pod repo update #用于保证本地地图相关SDK为最新版 pod update 
+
+```
+
+
 
 #### 2.2 手动集成
 
@@ -127,17 +152,18 @@ end
 
 
 
-#### 注意 在info添加如下配置
+#### 注意查看info中是否配置了以下内容
 
-````
-<application
-        ...
-        android:usesCleartextTraffic="true"
-        ...>
-       ...
-    </application>
 
-````
+```
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+
+```
+
 
 
 
