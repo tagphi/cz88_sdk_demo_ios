@@ -1,0 +1,6 @@
+framework module Pods_CZ88SDKDemoTests {
+  umbrella header "Pods-CZ88SDKDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
