@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "CZ88SDK"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
   s.summary = "We can use CZ88SDK to get ip address."
   # s.license = {"type"=>"MIT", "file"=>"LICENSE"}
   s.authors = {"yangqian"=>"cherry.yang@rtbasia.com"}

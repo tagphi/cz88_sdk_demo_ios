@@ -7,7 +7,6 @@
 
 #import "AppDelegate.h"
 #import <CZ88SDK/CZ88Header.h>
-
 @interface AppDelegate ()
 
 @end
@@ -17,10 +16,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    //是否开启日志
-    [[CZManager sharedInstance]setLogEnabled:YES];
+   
     //注册appkey
     [[CZManager sharedInstance]registerCZ88Key:@"0c8e4b31-4fcc-3708-aea8-a94527a72ed3"];
+    
+    //是否开启日志
+    [[CZManager sharedInstance]setLogEnabled:YES];
     return YES;
 }
 
