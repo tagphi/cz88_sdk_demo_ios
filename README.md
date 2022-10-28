@@ -81,8 +81,8 @@ pod repo update #用于保证本地地图相关SDK为最新版 pod update
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
    
-    //初始化并注册appkey
-    [[CZManager sharedInstance]registerCZ88Key:@"0c8e4b31-4fcc-3708-aea8-a94527a72ed3"];
+    //初始化并注册appkey(第一步申请的appkey)
+    [[CZManager sharedInstance]registerCZ88Key:@"appkey"];
     
     //是否开启日志
     [[CZManager sharedInstance]setLogEnabled:YES];
